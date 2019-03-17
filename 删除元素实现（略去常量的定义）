@@ -1,0 +1,12 @@
+
+int delete1(struct List L[],int i)
+{
+    if((i<1)||(i>MAXSIZE))
+        return 0;
+    struct List *p,*q;
+    p=&(L[i]);
+    q=L+MAXSIZE-1;
+    for(p+1;p<=q;++p)
+        (p-1)->element=p->element;
+    return 1;
+}
